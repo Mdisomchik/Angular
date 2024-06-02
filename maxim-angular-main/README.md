@@ -1,5 +1,4 @@
-Internship Cloud Engineer Little Task
-!!! DEADLINE LUNI 16:00 !!!
+
 Folosind Angular creeaza o aplicatie care afiseaza lista de pokemoni din acest API https://pokeapi.co/api/v2/pokemon?limit=10&offset=0 sau https://pokeapi.co/api/v2/pokemon/1/
 
 Pentru aceasta lista o sa fie nevoie de operatia de navigare inainte si inapoi si o functie de search pentru a cauta pokemonul dorit, pentru functia de search api este https://pokeapi.co/api/v2/pokemon/charizard
@@ -12,4 +11,3 @@ mai multe detalii despre api si daca vreti sa vedeti datele, puteti folosi https
 
 Stilizeaza aplicatia cum vrei, nu trebuie sa fie ca cea prezentata de mine, iar daca ai timp liber si vrei sa adaugi chestii noi, go for it
 
-pentru intrebari legate de cerinte sau alte lucruri legate de internship nu ezita sa imi trimiti un email
