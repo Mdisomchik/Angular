@@ -1,0 +1,239 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+  
+  .modal-content {
+    background-color: #000000;
+    padding: 90px;
+    border-radius: 20px;
+    width: 200%; 
+    max-width: 200px;
+    max-height: 200%; 
+    overflow-y: auto; 
+    margin: auto; 
+    box-shadow: 0 0 20px rgb(234, 255, 0); 
+    transition: all 0.3s ease;
+  }
+  
+  .modal.active {
+    display: flex;
+  }
+  
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .centered-grid {
+    max-width: 800px; 
+    width: 100%;
+  }
+
+.grass {
+  background-color: #000000;
+  color: #f2ff00;
+}
+
+.fire {
+  background-color: #000000;
+  color: #fbff00;
+}
+
+.water {
+  background-color: #000000;
+  color: #d9ff00;
+}
+
+.bug {
+  background-color: #000000;
+  color: #ffcc00;
+}
+
+.normal {
+  background-color: #000000;
+  color: #f2ff00;
+}
+
+.pokemon-grid {
+  display: grid;
+  grid-gap: 16px;
+  padding: 20px;
+  text-align: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.box {
+    width: 80%;
+    height: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: #000000;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+.box:hover {
+  transform: translateY(-5px);
+}
+.no-pokemon-message {
+  color: #ffffff;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: rgba(255, 0, 0, 0.7);
+  border-radius: 5px;
+}
+
+.box img {
+  max-width: 100%;
+  max-height: 300px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 100%;
+  box-shadow: 0 2px 4px rgb(246, 255, 0);
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #d1ff05;
+}
+
+p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #d0ff00;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  background-color: #000000;
+  border: none;
+  color: rgb(246, 255, 0);
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-button:hover {
+  background-color: #000000;
+}
+
+.previous-button {
+  margin-right: 10px;
+  width: 120px;
+}
+
+.next-button {
+  margin-left: 10px;
+  width: 120px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.type-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.type-button:hover {
+  background-color: #E0E0E0;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.search-container input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.search-container input[type="text"]:focus {
+  outline: none;
+  border-color: #000000;
+}
+
+.search-container input[type="text"]::placeholder {
+  color: #000000;
+}
+
+.search-button {
+  background-color: #000000;
+  border: none;
+  color: rgb(221, 255, 0);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #000000;
+}
+
+.box {
+  border: 2px solid transparent;
+}
+
+.box:hover {
+  border-color: #fbff00;
+}
+.ground {
+  background-color: #000000; 
+  color: #d9ff00;
+}
+
+.poison {
+  background-color: #000000; 
+  color: #fbff00; 
+}
+.no-pokemon-message {
+  color: #ffffff;
+  font-size: 20px;
+  margin-top: 20px;
+  text-align: center;
+}

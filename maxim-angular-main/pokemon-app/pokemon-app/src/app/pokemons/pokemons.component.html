@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="search-container">
+    <input type="text" [(ngModel)]="searchQuery" placeholder="Search Pokemon"(keydown.enter)="searchPokemon()">
+    <button class="search-button" (click)="searchPokemon()">Search</button>
+  </div>
+    
+  <div *ngIf="noPokemonFound" class="no-pokemon-message">
+    No Pokemon found for '{{ searchQuery }}'.
+  </div>
+  <div class="button-container">
+    <button class="type-button grass" (click)="onTypeSelect('grass')">Grass</button>
+    <button class="type-button fire" (click)="onTypeSelect('fire')">Fire</button>
+    <button class="type-button normal" (click)="onTypeSelect('normal')">Normal</button>
+    <button class="type-button water" (click)="onTypeSelect('water')">Water</button>
+    <button class="type-button bug" (click)="onTypeSelect('bug')">Bug</button>
+    <button class="type-button ground" (click)="onTypeSelect('ground')">Ground</button>
+  <button class="type-button poison" (click)="onTypeSelect('poison')">Poison</button>
+  </div>
+  
+  <div class="centered-grid">
+    <div class="pokemon-grid">
+      <div class="box" *ngFor="let pokemon of filteredPokemons" (click)="openModal(pokemon)">
+        <img  [src]="pokemon.sprites.front_default" alt="Pokemon">
+        <h3>{{ pokemon.name }}</h3>
+        <p><b>Type:</b> {{ pokemon.types[0].type.name }}</p>
+        <p><b>Health:</b> {{ pokemon.stats[0].base_stat}}</p>
+        <p><b>Attack Power:</b> {{pokemon.stats[1].base_stat }}</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal" [class.active]="modalActive" (click)="closeModal()">
+      <div class="modal-content" (click)="stopPropagation($event)" *ngIf="selectedPokemon">
+        <img  [src]="selectedPokemon.sprites.front_default" alt="Pokemon">
+        <h3>{{ selectedPokemon.name }}</h3>
+        <p><b>Type:</b> {{ selectedPokemon.types[0].type.name }}</p>
+        <p><b>Health:</b> {{ selectedPokemon.stats[0].base_stat}}</p>
+        <p><b>Attack Power:</b> {{ selectedPokemon.stats[1].base_stat }}</p>
+      </div>
+    </div>
+    
+
+  <div class="pagination">
+    <button class="pagination-button previous-button" (click)="previousPage()">Previous</button>
+    <button class="pagination-button next-button" (click)="nextPage()">Next</button>
+  </div>
+</div>

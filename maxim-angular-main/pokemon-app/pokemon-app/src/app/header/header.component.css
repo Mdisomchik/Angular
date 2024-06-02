@@ -1,0 +1,22 @@
+.pokemon-header {
+    padding: 15px 0px;
+    text-align: center;
+    background-color: rgb(0, 0, 0); 
+    animation: pulse 2s infinite alternate;
+  }
+  
+  .pokemon-header h1 {
+    text-transform: uppercase;
+    color: rgb(255, 255, 0); 
+  }
+  
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  
